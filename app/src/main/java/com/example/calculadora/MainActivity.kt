@@ -22,7 +22,8 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        var tvCasilla= findViewById<TextView>(R.id.ed_texto)
+        var tvCasilla= findViewById<TextView>(R.id.tv_texto)
+        var tvCasillaMin= findViewById<TextView>(R.id.tv_textooculto)
 
         var valor1= 0.0
         var valor2= 0.0
@@ -32,8 +33,10 @@ class MainActivity : AppCompatActivity() {
         zero.setOnClickListener {
             if(tvCasilla.length()<10) {
                 var num = 0
-                var resultado = tvCasilla.text.toString().toDouble()
-                if (resultado != 0.0) {
+                var resultado = tvCasilla.text.toString()
+                if (resultado == "0") {
+                    tvCasilla.text = num.toString()
+                } else{
                     var nuevoTexto = tvCasilla.text.toString() + num.toString()
                     tvCasilla.setText(nuevoTexto)
                 }
@@ -45,12 +48,12 @@ class MainActivity : AppCompatActivity() {
         one.setOnClickListener {
             if(tvCasilla.length()<10) {
                 var num = 1
-                var resultado = tvCasilla.text.toString().toDouble()
-                if (resultado == 0.0) {
-                    tvCasilla.setText(num.toString())
+                var resultado = tvCasilla.text.toString()
+                if (resultado == "0") {
+                    tvCasilla.text = num.toString()
                 } else {
                     var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.setText(nuevoTexto)
+                    tvCasilla.text = nuevoTexto
                 }
             }
         }
@@ -60,10 +63,10 @@ class MainActivity : AppCompatActivity() {
                 var num = 2
                 var resultado = tvCasilla.text.toString().toDouble()
                 if (resultado == 0.0) {
-                    tvCasilla.setText(num.toString())
+                    tvCasilla.text = num.toString()
                 } else {
                     var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.setText(nuevoTexto)
+                    tvCasilla.text = nuevoTexto
                 }
             }
         }
@@ -74,10 +77,10 @@ class MainActivity : AppCompatActivity() {
                 var num = 3
                 var resultado = tvCasilla.text.toString().toDouble()
                 if (resultado == 0.0) {
-                    tvCasilla.setText(num.toString())
+                    tvCasilla.text = num.toString()
                 } else {
                     var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.setText(nuevoTexto)
+                    tvCasilla.text = nuevoTexto
                 }
             }
         }
@@ -88,7 +91,7 @@ class MainActivity : AppCompatActivity() {
                 var num = 4
                 var resultado = tvCasilla.text.toString().toDouble()
                 if (resultado == 0.0) {
-                    tvCasilla.setText(num.toString())
+                    tvCasilla.text = num.toString()
                 } else {
                     var nuevoTexto = tvCasilla.text.toString() + num.toString()
                     tvCasilla.setText(nuevoTexto)
@@ -102,10 +105,10 @@ class MainActivity : AppCompatActivity() {
                 var num = 5
                 var resultado = tvCasilla.text.toString().toDouble()
                 if (resultado == 0.0) {
-                    tvCasilla.setText(num.toString())
+                    tvCasilla.text = num.toString()
                 } else {
                     var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.setText(nuevoTexto)
+                    tvCasilla.text = nuevoTexto
                 }
             }
         }
@@ -116,10 +119,10 @@ class MainActivity : AppCompatActivity() {
                 var num = 6
                 var resultado = tvCasilla.text.toString().toDouble()
                 if (resultado == 0.0) {
-                    tvCasilla.setText(num.toString())
+                    tvCasilla.text = num.toString()
                 } else {
                     var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.setText(nuevoTexto)
+                    tvCasilla.text = nuevoTexto
                 }
             }
         }
@@ -130,10 +133,10 @@ class MainActivity : AppCompatActivity() {
                 var num = 7
                 var resultado = tvCasilla.text.toString().toDouble()
                 if (resultado == 0.0) {
-                    tvCasilla.setText(num.toString())
+                    tvCasilla.text = num.toString()
                 } else {
                     var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.setText(nuevoTexto)
+                    tvCasilla.text = nuevoTexto
                 }
             }
         }
@@ -144,10 +147,10 @@ class MainActivity : AppCompatActivity() {
                 var num = 8
                 var resultado = tvCasilla.text.toString().toDouble()
                 if (resultado == 0.0) {
-                    tvCasilla.setText(num.toString())
+                    tvCasilla.text = num.toString()
                 } else {
                     var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.setText(nuevoTexto)
+                    tvCasilla.text = nuevoTexto
                 }
             }
         }
@@ -158,10 +161,10 @@ class MainActivity : AppCompatActivity() {
                 var num = 9
                 var resultado = tvCasilla.text.toString().toDouble()
                 if (resultado == 0.0) {
-                    tvCasilla.setText(num.toString())
+                    tvCasilla.text = num.toString()
                 } else {
                     var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.setText(nuevoTexto)
+                    tvCasilla.text = nuevoTexto
                 }
             }
         }
@@ -169,7 +172,7 @@ class MainActivity : AppCompatActivity() {
         var reset= findViewById<Button>(R.id.bt_reset)
         reset.setOnClickListener {
             var texto= "0"
-            tvCasilla.setText(texto)
+            tvCasilla.text = texto
             valor1= 0.0
             valor2= 0.0
             operacion= "nula"
@@ -179,7 +182,9 @@ class MainActivity : AppCompatActivity() {
         sumar.setOnClickListener {
             operacion= "+"
             valor1= tvCasilla.text.toString().toDouble()
-            tvCasilla.setText("0")
+            tvCasilla.text = "0"
+            var textoMin= "${valor1} +"
+            tvCasillaMin.text = textoMin
 
         }
 
@@ -187,7 +192,10 @@ class MainActivity : AppCompatActivity() {
         restar.setOnClickListener {
             operacion= "-"
             valor1= tvCasilla.text.toString().toDouble()
-            tvCasilla.setText("0")
+            tvCasilla.text = "0"
+            var textoMin= "$valor1 -"
+            tvCasillaMin.text = textoMin
+
 
         }
         var multiplicar= findViewById<Button>(R.id.bt_multi)
@@ -195,20 +203,27 @@ class MainActivity : AppCompatActivity() {
             operacion= "*"
             valor1= tvCasilla.text.toString().toDouble()
             tvCasilla.setText("0")
+            var textoMin= "$valor1 *"
+            tvCasillaMin.text = textoMin
 
         }
         var dividir= findViewById<Button>(R.id.bt_dividir)
         dividir.setOnClickListener {
             operacion= "/"
             valor1= tvCasilla.text.toString().toDouble()
-            tvCasilla.setText("0")
+            tvCasilla.text = "0"
+            var textoMin= "$valor1 /"
+            tvCasillaMin.text = textoMin
 
         }
 
         var punto= findViewById<Button>(R.id.bt_punto)
         punto.setOnClickListener {
-           var resultado= tvCasilla.text.toString()+"."
-            tvCasilla.setText(resultado)
+            var texto= tvCasilla.text.toString()
+            if(!texto.contains(".")){
+            var resultado= tvCasilla.text.toString()+"."
+                tvCasilla.text = resultado
+            }
         }
 
         var igual= findViewById<Button>(R.id.bt_igual)
@@ -221,25 +236,33 @@ class MainActivity : AppCompatActivity() {
                     var resultadoTexto= resultado.toString()
                     tvCasilla.setText(resultadoTexto)
                     operacion= "nula"
+                    var textoMin= "${tvCasillaMin.text.toString()}  $valor2 = $resultadoTexto"
+                    tvCasillaMin.text = textoMin
                 }
                 if(operacion == "-"){
                     var resultado= valor1 - valor2
                     var resultadoTexto= resultado.toString()
-                    tvCasilla.setText(resultadoTexto)
+                    tvCasilla.text = resultadoTexto
                     operacion= "nula"
+                    var textoMin= "${tvCasillaMin.text.toString()}  $valor2 = $resultadoTexto"
+                    tvCasillaMin.text = textoMin
                 }
                 if(operacion == "*"){
                     var resultado= valor1 * valor2
                     var resultadoTexto= resultado.toString()
-                    tvCasilla.setText(resultadoTexto)
+                    tvCasilla.text = resultadoTexto
                     operacion= "nula"
+                    var textoMin= "${tvCasillaMin.text.toString()}  $valor2 = $resultadoTexto"
+                    tvCasillaMin.text = textoMin
                 }
                 if(operacion == "/"){
                     if(valor1 != 0.0){
                         var resultado= valor1 / valor2
                         var resultadoTexto= resultado.toString()
-                        tvCasilla.setText(resultadoTexto)
+                        tvCasilla.text = resultadoTexto
                         operacion= "nula"
+                        var textoMin= "${tvCasillaMin.text.toString()}  $valor2 = $resultadoTexto"
+                        tvCasillaMin.text = textoMin
                     }else{
                         Toast.makeText(this,"Error al dividir por 0", Toast.LENGTH_SHORT).show()
                         valor1= 0.0

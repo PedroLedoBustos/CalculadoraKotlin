@@ -16,7 +16,7 @@
 
         android:background="@color/grey2">
         <TextView
-            android:id="@+id/ed_texto"
+            android:id="@+id/tv_texto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/zero"
@@ -30,7 +30,7 @@
             android:layout_marginBottom="5dp"
             android:layout_gravity="center_horizontal"/>
         <TextView
-            android:id="@+id/ed_textooculto"
+            android:id="@+id/tv_textooculto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/zero"
