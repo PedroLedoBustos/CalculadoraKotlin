@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+
+        android:background="@color/grey2">
+        <TextView
+            android:id="@+id/ed_texto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            android:textSize="50sp"
+            android:maxLength="11"
+            android:gravity="end|center"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/ed_background"
+            android:textColor="@color/black"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/ed_textooculto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            android:textSize="25sp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:gravity="end"
+            android:textColor="@color/black"
+            android:layout_gravity="end"
+            android:layout_marginEnd="40dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_reset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/backgroundoperations"
+                android:text="@string/reset"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_dividir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/backgroundoperations"
+                android:text="@string/dividir"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_multi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/backgroundoperations"
+                android:text="@string/multi"
+                android:textSize="40sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_seven"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_background"
+                android:text="@string/seven"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_eight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_background"
+                android:text="@string/eight"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_nine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_background"
+                android:text="@string/nine"
+                android:textSize="40sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_four"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_background"
+                android:text="@string/four"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_five"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_background"
+                android:text="@string/five"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_six"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_background"
+                android:text="@string/six"
+                android:textSize="40sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_background"
+                android:text="@string/one"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_background"
+                android:text="@string/two"
+                android:textSize="40sp"
+                android:gravity="center"
+                android:layout_marginEnd="10dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_background"
+                android:text="@string/three"
+                android:textSize="40sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_suma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroundoperations"
+            android:text="@string/suma"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bt_background"
+            android:text="@string/zero"
+            android:textSize="40sp"
+            android:gravity="center"
+            android:layout_marginEnd="10dp"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_restar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/backgroundoperations"
+            android:text="@string/resta"
+            android:textSize="40sp"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            >
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_igual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/backgroundoperations"
+                android:text="@string/igual"
+                android:textSize="40sp"
+                android:layout_marginRight="40dp"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/bt_punto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bt_background"
+                android:text="@string/punto"
+                android:textSize="40sp"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+</LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
