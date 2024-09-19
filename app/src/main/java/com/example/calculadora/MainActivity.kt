@@ -28,240 +28,201 @@ class MainActivity : AppCompatActivity() {
         var valor1= 0.0
         var valor2= 0.0
         var operacion = "nula"
+        var igualdadEjecutada= false
 
-        var zero= findViewById<Button>(R.id.bt_zero)
+        val zero= findViewById<Button>(R.id.bt_zero)
         zero.setOnClickListener {
-            if(tvCasilla.length()<10) {
-                var num = 0
-                var resultado = tvCasilla.text.toString()
-                if (resultado == "0") {
-                    tvCasilla.text = num.toString()
-                } else{
-                    var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.setText(nuevoTexto)
-                }
+            val num = 0
+            if (igualdadEjecutada){
+                tvCasilla.text="0"
+                igualdadEjecutada=false
             }
-
+            agregarNumero(tvCasilla,num)
         }
 
-        var one= findViewById<Button>(R.id.bt_one)
+        val one= findViewById<Button>(R.id.bt_one)
         one.setOnClickListener {
-            if(tvCasilla.length()<10) {
-                var num = 1
-                var resultado = tvCasilla.text.toString()
-                if (resultado == "0") {
-                    tvCasilla.text = num.toString()
-                } else {
-                    var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.text = nuevoTexto
-                }
+            val num = 1
+            if (igualdadEjecutada){
+                tvCasilla.text="0"
+                igualdadEjecutada=false
             }
+            agregarNumero(tvCasilla,num)
         }
-        var two= findViewById<Button>(R.id.bt_two)
+        val two= findViewById<Button>(R.id.bt_two)
         two.setOnClickListener {
-            if(tvCasilla.length()<10) {
-                var num = 2
-                var resultado = tvCasilla.text.toString().toDouble()
-                if (resultado == 0.0) {
-                    tvCasilla.text = num.toString()
-                } else {
-                    var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.text = nuevoTexto
-                }
+            val num = 2
+            if (igualdadEjecutada){
+                tvCasilla.text="0"
+                igualdadEjecutada=false
             }
+            agregarNumero(tvCasilla,num)
         }
 
-        var three= findViewById<Button>(R.id.bt_three)
+        val three= findViewById<Button>(R.id.bt_three)
         three.setOnClickListener {
-            if(tvCasilla.length()<10) {
-                var num = 3
-                var resultado = tvCasilla.text.toString().toDouble()
-                if (resultado == 0.0) {
-                    tvCasilla.text = num.toString()
-                } else {
-                    var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.text = nuevoTexto
-                }
+            val num = 3
+            if (igualdadEjecutada){
+                tvCasilla.text="0"
+                igualdadEjecutada=false
             }
+            agregarNumero(tvCasilla,num)
         }
 
-        var four= findViewById<Button>(R.id.bt_four)
+       val four= findViewById<Button>(R.id.bt_four)
         four.setOnClickListener {
-            if(tvCasilla.length()<10) {
-                var num = 4
-                var resultado = tvCasilla.text.toString().toDouble()
-                if (resultado == 0.0) {
-                    tvCasilla.text = num.toString()
-                } else {
-                    var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.setText(nuevoTexto)
-                }
+            val num = 4
+            if (igualdadEjecutada){
+                tvCasilla.text="0"
+                igualdadEjecutada=false
             }
+            agregarNumero(tvCasilla,num)
         }
 
-        var five= findViewById<Button>(R.id.bt_five)
+        val five= findViewById<Button>(R.id.bt_five)
         five.setOnClickListener {
-            if(tvCasilla.length()<10) {
-                var num = 5
-                var resultado = tvCasilla.text.toString().toDouble()
-                if (resultado == 0.0) {
-                    tvCasilla.text = num.toString()
-                } else {
-                    var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.text = nuevoTexto
-                }
+            val num = 5
+            if (igualdadEjecutada){
+                tvCasilla.text="0"
+                igualdadEjecutada=false
             }
+            agregarNumero(tvCasilla,num)
         }
 
-        var six= findViewById<Button>(R.id.bt_six)
+        val six= findViewById<Button>(R.id.bt_six)
         six.setOnClickListener {
-            if(tvCasilla.length()<10) {
-                var num = 6
-                var resultado = tvCasilla.text.toString().toDouble()
-                if (resultado == 0.0) {
-                    tvCasilla.text = num.toString()
-                } else {
-                    var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.text = nuevoTexto
-                }
+            val num = 6
+            if (igualdadEjecutada){
+                tvCasilla.text="0"
+                igualdadEjecutada=false
             }
+            agregarNumero(tvCasilla,num)
         }
 
-        var seven= findViewById<Button>(R.id.bt_seven)
+        val seven= findViewById<Button>(R.id.bt_seven)
         seven.setOnClickListener {
-            if(tvCasilla.length()<10) {
-                var num = 7
-                var resultado = tvCasilla.text.toString().toDouble()
-                if (resultado == 0.0) {
-                    tvCasilla.text = num.toString()
-                } else {
-                    var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.text = nuevoTexto
-                }
+            val num = 7
+            if (igualdadEjecutada){
+                tvCasilla.text="0"
+                igualdadEjecutada=false
             }
+            agregarNumero(tvCasilla,num)
         }
 
-        var eight= findViewById<Button>(R.id.bt_eight)
+        val eight= findViewById<Button>(R.id.bt_eight)
         eight.setOnClickListener {
-            if(tvCasilla.length()<10) {
-                var num = 8
-                var resultado = tvCasilla.text.toString().toDouble()
-                if (resultado == 0.0) {
-                    tvCasilla.text = num.toString()
-                } else {
-                    var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.text = nuevoTexto
-                }
+            val num = 8
+            if (igualdadEjecutada){
+                tvCasilla.text="0"
+                igualdadEjecutada=false
             }
+            agregarNumero(tvCasilla,num)
         }
 
-        var nine= findViewById<Button>(R.id.bt_nine)
+        val nine= findViewById<Button>(R.id.bt_nine)
         nine.setOnClickListener {
-            if(tvCasilla.length()<10) {
-                var num = 9
-                var resultado = tvCasilla.text.toString().toDouble()
-                if (resultado == 0.0) {
-                    tvCasilla.text = num.toString()
-                } else {
-                    var nuevoTexto = tvCasilla.text.toString() + num.toString()
-                    tvCasilla.text = nuevoTexto
-                }
+            val num= 9
+            if (igualdadEjecutada){
+                tvCasilla.text="0"
+                igualdadEjecutada=false
             }
+            agregarNumero(tvCasilla, num)
         }
 
-        var reset= findViewById<Button>(R.id.bt_reset)
+        val reset= findViewById<Button>(R.id.bt_reset)
         reset.setOnClickListener {
-            var texto= "0"
+            val texto= "0"
             tvCasilla.text = texto
             valor1= 0.0
             valor2= 0.0
+            tvCasillaMin.text= texto
             operacion= "nula"
         }
 
-        var sumar= findViewById<Button>(R.id.bt_suma)
+        val sumar= findViewById<Button>(R.id.bt_suma)
         sumar.setOnClickListener {
             operacion= "+"
             valor1= tvCasilla.text.toString().toDouble()
             tvCasilla.text = "0"
-            var textoMin= "${valor1} +"
+            val textoMin= "$valor1 +"
             tvCasillaMin.text = textoMin
 
         }
 
-        var restar= findViewById<Button>(R.id.bt_restar)
+        val restar= findViewById<Button>(R.id.bt_restar)
         restar.setOnClickListener {
             operacion= "-"
             valor1= tvCasilla.text.toString().toDouble()
             tvCasilla.text = "0"
-            var textoMin= "$valor1 -"
+            val textoMin= "$valor1 -"
             tvCasillaMin.text = textoMin
 
 
         }
-        var multiplicar= findViewById<Button>(R.id.bt_multi)
+        val multiplicar= findViewById<Button>(R.id.bt_multi)
         multiplicar.setOnClickListener {
             operacion= "*"
             valor1= tvCasilla.text.toString().toDouble()
-            tvCasilla.setText("0")
-            var textoMin= "$valor1 *"
+            tvCasilla.text = "0"
+            val textoMin= "$valor1 *"
             tvCasillaMin.text = textoMin
 
         }
-        var dividir= findViewById<Button>(R.id.bt_dividir)
+        val dividir= findViewById<Button>(R.id.bt_dividir)
         dividir.setOnClickListener {
             operacion= "/"
             valor1= tvCasilla.text.toString().toDouble()
             tvCasilla.text = "0"
-            var textoMin= "$valor1 /"
+            val textoMin= "$valor1 /"
             tvCasillaMin.text = textoMin
 
         }
 
-        var punto= findViewById<Button>(R.id.bt_punto)
+        val punto= findViewById<Button>(R.id.bt_punto)
         punto.setOnClickListener {
-            var texto= tvCasilla.text.toString()
+            val texto= tvCasilla.text.toString()
             if(!texto.contains(".")){
-            var resultado= tvCasilla.text.toString()+"."
+            val resultado= tvCasilla.text.toString()+"."
                 tvCasilla.text = resultado
             }
         }
 
-        var igual= findViewById<Button>(R.id.bt_igual)
+        val igual= findViewById<Button>(R.id.bt_igual)
         igual.setOnClickListener {
             if(operacion != "nula"){
                 valor2= tvCasilla.text.toString().toDouble()
 
                 if(operacion == "+"){
-                    var resultado= valor1 + valor2
-                    var resultadoTexto= resultado.toString()
-                    tvCasilla.setText(resultadoTexto)
+                    val resultado= valor1 + valor2
+                    val resultadoTexto= resultado.toString()
+                    tvCasilla.text = resultadoTexto
                     operacion= "nula"
-                    var textoMin= "${tvCasillaMin.text.toString()}  $valor2 = $resultadoTexto"
+                    val textoMin= "${tvCasillaMin.text.toString()}  $valor2 = $resultadoTexto"
                     tvCasillaMin.text = textoMin
                 }
                 if(operacion == "-"){
-                    var resultado= valor1 - valor2
-                    var resultadoTexto= resultado.toString()
+                    val resultado= valor1 - valor2
+                    val resultadoTexto= resultado.toString()
                     tvCasilla.text = resultadoTexto
                     operacion= "nula"
-                    var textoMin= "${tvCasillaMin.text.toString()}  $valor2 = $resultadoTexto"
+                    val textoMin= "${tvCasillaMin.text.toString()}  $valor2 = $resultadoTexto"
                     tvCasillaMin.text = textoMin
                 }
                 if(operacion == "*"){
-                    var resultado= valor1 * valor2
-                    var resultadoTexto= resultado.toString()
+                    val resultado= valor1 * valor2
+                    val resultadoTexto= resultado.toString()
                     tvCasilla.text = resultadoTexto
                     operacion= "nula"
-                    var textoMin= "${tvCasillaMin.text.toString()}  $valor2 = $resultadoTexto"
+                    val textoMin= "${tvCasillaMin.text.toString()}  $valor2 = $resultadoTexto"
                     tvCasillaMin.text = textoMin
                 }
                 if(operacion == "/"){
                     if(valor1 != 0.0){
-                        var resultado= valor1 / valor2
-                        var resultadoTexto= resultado.toString()
+                        val resultado= valor1 / valor2
+                        val resultadoTexto= resultado.toString()
                         tvCasilla.text = resultadoTexto
                         operacion= "nula"
-                        var textoMin= "${tvCasillaMin.text.toString()}  $valor2 = $resultadoTexto"
+                        val textoMin= "${tvCasillaMin.text.toString()}  $valor2 = $resultadoTexto"
                         tvCasillaMin.text = textoMin
                     }else{
                         Toast.makeText(this,"Error al dividir por 0", Toast.LENGTH_SHORT).show()
@@ -269,9 +230,23 @@ class MainActivity : AppCompatActivity() {
                         valor2= 0.0
                     }
                 }
+                igualdadEjecutada= true
             }
         }
 
 
     }
+    private fun agregarNumero(texto:TextView, numero:Int){
+        if(texto.length()<10) {
+            val resultado = texto.text.toString()
+            if (resultado == "0" && texto.length()==1) {
+                texto.text = numero.toString()
+            } else {
+                val nuevoTexto = texto.text.toString() + numero.toString()
+                texto.text = nuevoTexto
+            }
+        }
+
+    }
+
 }
